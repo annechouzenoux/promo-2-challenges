@@ -12,14 +12,14 @@ end
 def belongs_to?(a_string, a_word)
   # TODO: return true if a_string contains a_word
   # example: belongs_to?("hey jude", "jude") => true
-  a_string.include? "a_word"
+  a_string.include? a_word
 end
 
 
 def replace(initial_string, old_letter, new_letter)
   # TODO: return a copy of the string with the new letter replacing the old one
   # example: replace("casanova", "a", "o") => "cosonovo"
-  initial_string.gsub "old letter", "new letter"
+  initial_string.gsub old_letter, new_letter
 end
 
 def exactly_divide(an_integer, a_divider)
@@ -37,7 +37,7 @@ end
 def random_subset(an_array, sample_size)
   # TODO: return a random subset of an_array with size sample_size
   # example: random_subset(('a'..'z').to_a, 4) => ["u", "q", "l", "t"]
-  an_array.sample(n)
+  an_array.sample(sample_size)
 end
 
 def randomize(an_array)
@@ -51,3 +51,4 @@ def ascending_order(an_array)
   # example: ascending_order([7, 3, 1, 6, 9]) => [1, 3, 6, 7, 9]
   an_array.sort
 end
+
