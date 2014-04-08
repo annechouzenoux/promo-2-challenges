@@ -22,11 +22,10 @@ def replace(initial_string, old_letter, new_letter)
 initial_string.gsub "old letter", "new letter"
 end
 
-
-
 def exactly_divide(an_integer, a_divider)
   # TODO: return divison of an_integer by a_divider (computing the floating division, NOT the euclidean one)
   # example: exactly_divide(13, 4) => 3.25
+an_integer/a_divider.to_f
 end
 
 def is_divisible_by_two(an_integer)
