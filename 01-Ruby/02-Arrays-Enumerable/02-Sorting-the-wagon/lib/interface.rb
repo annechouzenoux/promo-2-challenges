@@ -1,4 +1,4 @@
-require_relative "wagon_sort"
+ require_relative "wagon_sort"
 
 students = []
 
@@ -8,7 +8,7 @@ begin
   name.chomp! if name
 
   # TODO: Add the name we just gotto the students array
-  students << name if name != ""
+  students << name if name != "" # ou name unless name == ""
 
 end while name != ""
 
@@ -16,4 +16,12 @@ end while name != ""
 
 student_count = students.length
 
-puts "Congratulations! Your Wagon has #{ student_count } students" # {wagon_sort (students)}
+puts "Congratulations! Your Wagon has #{ student_count } students"
+# {wagon_sort (students)}
+
+
+
+students.sort.each { |student| puts student }
+# for student in students.sort
+  puts student
+end
