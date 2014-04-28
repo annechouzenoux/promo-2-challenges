@@ -1,3 +1,5 @@
+
+
 class UI
   TASKS = {
     list: "- List all recipes [list]",
@@ -13,18 +15,30 @@ class UI
 
   def list
     # TODO: call the appropriate controller method with the proper argument(s)
-    @controller.list_recipes.each_with_index do |recipe, index|
-      puts "#{index + 1}. #{recipe}"
+    @controller.list.each_with_index do |recipe, index|
+      puts "#{index + 1}. #{recipe.name} #{recipe.prep_time} min"
     # TODO: format and display the retrieved data in a numbered list
     end
   end
 
   def add
     # TODO: ask the user a recipe name
-    puts "which recipe do you want to add ?"
+    puts "Enter the name of your new recipe"
     name = gets.chomp
+
+    uts "Enter the rating of your new recipe?"
+    rating = gets.chomp
+
+    puts "Enter the cook_time of your new recipe"
+    cook_time = gets.chomp
+
+    puts "Enter the prep_time of your new recipe"
+    prep_time = gets.chomp
+
+
+
     # TODO: call the appropriate controller method with the proper argument(s)
-    added_recipe = @controller.add_recipe(name)
+    added_recipe = @controller.add(recipe_name, rating)
 
     puts "the recipe #{added_recipe} has been added"
   end

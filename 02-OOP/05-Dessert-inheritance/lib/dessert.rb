@@ -1,6 +1,6 @@
 class Dessert
 
-  attr_accessor :name, :calories
+  attr_reader :name, :calories
 
   def initialize(name, calories)
     @calories = calories
@@ -9,6 +9,14 @@ class Dessert
 
   def healthy?
     #should return `true` if a dessert has less than 200 calories
+    #plusieurs possibilités:
+    #if calories < 200
+    #   true
+    #else
+    #   false
+    #end
+  #ou:
+    #@calories < 200 ? true :f alse
     @calories < 200
   end
 
@@ -29,6 +37,7 @@ class JellyBean < Dessert
   end
   def delicious?
     (@flavor == "black licorice") ? false : true
+    #ou: @flavor != "black licorice"
     end
   end
 end
