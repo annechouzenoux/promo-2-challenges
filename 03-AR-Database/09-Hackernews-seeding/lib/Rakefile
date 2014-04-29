@@ -32,3 +32,4 @@ desc "populate the database with sample data"
 task "db:seed" do
   require APP_ROOT.join('db', 'seed.rb')
 end
+

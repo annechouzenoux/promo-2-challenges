@@ -23,11 +23,14 @@ while true
     rating = ask_and_get("rating")
     #post = { name: name, source_url: source_url, date: Time.now, rating: rating }
     #TODO: use ActiveRecord to add a new entry to the DB
-    post = Post.create(name: name, source_url: source_url, date: Time.now, rating: rating)
-
+    Post.create(name: name, source_url: source_url, date: Time.now, rating: rating)
+    #ou Post.create(post)
   when 2
     #TODO: use ActiveRecord to get all entries from the DB
-    post = Post.all
+    Post.all.each {|post| puts post}
+
+    # Post.all est un Scope, objet manipulable sur lequel on peut appeler des requetes
+    # = moyen de préparer une requete
   when 3
     #TODO: use ActiveRecord to delete all entries from the DB
     post = Post.all
