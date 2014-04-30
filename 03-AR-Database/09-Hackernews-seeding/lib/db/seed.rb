@@ -8,6 +8,7 @@ require 'rubygems'
 
 
 puts "Seeding database..."
+
 # 1. create fake users
 
 users = []
