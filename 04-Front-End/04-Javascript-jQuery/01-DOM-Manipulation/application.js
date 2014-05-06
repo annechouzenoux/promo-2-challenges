@@ -24,6 +24,7 @@ function run_challenges() {
   $(".table > thead > tr > th").css({
       color: "blue"
   });
+  //$("th").addClass("blue");
 
   // Ex 5. Count the number of table body rows there are (team count!)
   var team_count = 0;  // TODO: replace 0, keep the team_count variable.
@@ -33,12 +34,12 @@ function run_challenges() {
   // Ex 6. Say there is a 15th team added to the table.
   //       Add a row at the bottom, this new team should have zero points.
   $("tbody").append($("<tr><td>15</td><td></td><td>0</td></tr>"));
-
+  //ou      .append("<tr><td>15</td><td></td><td>0</td></tr>"))
 
   // Ex 7. Write some code to sum all points given to all teams
   var sum = 0;  // TODO: replace 0 with your sum result, keep the sum variable.
   $("tbody > tr > td:nth-child(3)").each(function(i, el) {
-    sum += parseInt($(el).text())
+    sum += parseInt($(el).text()) //ou: parseInt($(this).text())
   console.log(sum)
   });
 
