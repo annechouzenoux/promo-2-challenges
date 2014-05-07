@@ -1,4 +1,14 @@
 
+function bindKeydown() {
+  $("body").on("keydown", function(event) {
+    console.log(event.keyCode);
+  });
+}
+
+$(document).ready(function() {
+  bindKeydown();
+});
+=======================================================
 
 $(document).ready(function() {
   $(document).on('keyup', function(event) {
@@ -15,7 +25,8 @@ $(document).ready(function() {
         .removeClass('active')
         .next('td').addClass('active')
     };
-
+  });
 });
+
 
 
